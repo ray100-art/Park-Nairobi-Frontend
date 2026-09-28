@@ -9,8 +9,8 @@ without a backend; sign-in, bookings and payments need the API running).
 
 The API behind it is a Java 21 / Spring Boot 3 service with JWT auth, role-based access,
 Flyway migrations, STOMP WebSocket updates, and an M-Pesa callback that is authenticated and
-idempotent (a payment is only settled once). That repository is private; a walkthrough is
-available on request.
+idempotent (a payment is only settled once): see
+[Park-Nairobi-Backend](https://github.com/ray100-art/Park-Nairobi-Backend).
 
 The demo data covers parking areas in Nairobi (CBD, Westlands, Upper Hill, Karen,
 Thika Road), Mombasa, Kisumu, Nakuru, Eldoret, Meru, Embu and Chuka.
