@@ -4,6 +4,14 @@ The web frontend for **ParkNairobi**, a smart-parking platform for Kenyan towns.
 a free bay on a live map, reserve it, pay with **M-Pesa**, and manage their bookings. Admins
 watch occupancy and manage users. Bays are tracked through entry and exit sensor events.
 
+**Live demo:** https://ray100-art.github.io/Park-Nairobi-Frontend/ (the map and pages load
+without a backend; sign-in, bookings and payments need the API running).
+
+The API behind it is a Java 21 / Spring Boot 3 service with JWT auth, role-based access,
+Flyway migrations, STOMP WebSocket updates, and an M-Pesa callback that is authenticated and
+idempotent (a payment is only settled once). That repository is private; a walkthrough is
+available on request.
+
 The demo data covers parking areas in Nairobi (CBD, Westlands, Upper Hill, Karen,
 Thika Road), Mombasa, Kisumu, Nakuru, Eldoret, Meru, Embu and Chuka.
 
@@ -61,3 +69,7 @@ containers on the same Docker network, or change `proxy_pass` in `nginx.conf`.
 Set `API_BASE` in *Site settings → Environment variables*. The build step writes it into
 `js/config.js`, and `netlify.toml` maps `/admin`, `/dashboard`, `/bookings` and `/profile` to
 their pages.
+
+## License
+
+[MIT](LICENSE)
